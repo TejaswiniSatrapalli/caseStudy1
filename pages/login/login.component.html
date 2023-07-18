@@ -1,0 +1,85 @@
+<div class="login_page">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="card">
+                    <h3>Login</h3>
+                    <hr />
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">
+                                User
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                Admin
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <!-- USER START -->
+                            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm, 'CUSTOMER')" [noValidate]="false">
+
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label>User Email</label>
+                                            <input type="email" class="form-control" ngModel name="email" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" ngModel name="password"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-primary mt-3">
+                                    Submit
+                                </button>
+                                <button  routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                            </form>
+                            <!-- USER ENDS -->
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <!-- ADMIN START -->
+                            <form #loginAdminForm="ngForm" (ngSubmit)="onSubmit(loginAdminForm,'ADMIN')"
+                                [noValidate]="false">
+
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label>Admin Username</label>
+                                            <input type="text" class="form-control" ngModel name="adminUsername"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" ngModel name="adminPassword"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-primary mt-3">
+                                    Submit
+                                </button>
+                                <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                            </form>
+                            <!-- ADMIN ENDS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

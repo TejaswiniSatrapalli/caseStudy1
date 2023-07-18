@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img src="/assets/stock.png" style="height: 30px; width: 30px; margin-left: 10px; margin-bottom: 10px;">
+    <a class="navbar-brand ms-3" href="/admin">{{APP_NAME}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/add-rate" routerLinkActive="active">Add Rate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/rate-list" routerLinkActive="active">Rate List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/money-convert" routerLinkActive="active">Money Convert</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/user-list" routerLinkActive="active">Users</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/add-bank-account" routerLinkActive="active">Add Bank Account</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/transaction-list" routerLinkActive="active">Transactions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/admin/profile" routerLinkActive="active">Profile</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" (click)="onLogout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-4">
+    <router-outlet></router-outlet>
+</div>

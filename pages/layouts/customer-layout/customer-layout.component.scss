@@ -1,0 +1,40 @@
+/* Add this CSS to your styles.css or styles.scss file */
+
+/* Style for the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #343a40;
+}
+
+/* Style for the logo */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style for the sidebar links */
+.nav-link {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+/* Add background color to the active link */
+.nav-link.active {
+  background-color: #495057;
+  border-radius: 0.25rem;
+}
+
+/* Style for the main content area */
+main {
+  padding: 1rem;
+}
+
+/* Add some margin to the container inside the main content area */
+.container {
+  margin-top: 2rem;
+}

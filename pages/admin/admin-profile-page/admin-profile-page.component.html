@@ -1,0 +1,59 @@
+<div class="register_page mt-4">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <h3>My Profile</h3>
+                    <hr>
+                    <form #registerAdminForm="ngForm" (ngSubmit)="onSubmit(registerAdminForm)" [noValidate]="false">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="adminDetails.adminName"
+                                        name="adminName" disabled>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Email address</label>
+                                    <input type="email" class="form-control" [(ngModel)]="adminDetails.adminEmail"
+                                        name="adminEmail" disabled>
+                                </div>
+                            </div>
+
+                            <div class=" col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" [(ngModel)]="adminDetails.adminUsername"
+                                        name="adminUsername" disabled>
+                                </div>
+                            </div>
+
+
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Old Password</label>
+                                    <input type="password" class="form-control" ngModel name="oldPassword" required
+                                        minlength="8">
+                                </div>
+                            </div>
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" class="form-control" ngModel name="newPassword" required
+                                        minlength="8">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary mt-3">Reset Password</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

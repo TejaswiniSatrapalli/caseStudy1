@@ -1,0 +1,121 @@
+ <!-- <div class="card">
+    <div class="card-header">
+      <h1>Forex Exchange Rate Graph</h1>
+    </div>
+    <div class="card-body">
+      <div class="chart-container">
+        <canvas #exchangeRateGraph></canvas>
+      </div>
+      <div class="dropdown-container">
+        <div class="dropdown">
+          <label for="country1">Country 1:</label>
+          <select id="country1" [(ngModel)]="country1" (change)="updateChart()">
+            <option value="INR">India</option>
+            <option value="USD">USA</option>
+            <option value="GBP">UK</option>
+            <option value="EUR">France</option>
+            <option value="JPY">Japan</option>
+          </select>
+        </div>
+        <div class="dropdown">
+          <label for="country2">Country 2:</label>
+          <select id="country2" [(ngModel)]="country2" (change)="updateChart()">
+            <option value="INR">India</option>
+            <option value="USD">USA</option>
+            <option value="GBP">UK</option>
+            <option value="EUR">France</option>
+            <option value="JPY">Japan</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
+  -->
+
+  <div class="container">
+    
+    <!-- <div class="send-money-button"> -->
+      <!-- <button class="btn-send-money" routerLink="/chooserecipient">Send Money</button> -->
+      <!-- <button class="btn-send-money" routerLink="/conversion">Send Money</button> -->
+    <!-- </div> -->
+    <!-- <div class="sidebar">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Global Prsence</a></li>
+        <li><a href="#">Analysis</a></li>
+
+      </ul>
+    </div> -->
+    <div class="card">
+      <div class="card-header">
+        <h1> Exchange Rate </h1>
+      </div>
+      <div class="card-body">
+        <div class="chart-container">
+          <canvas #exchangeRateGraph></canvas>
+        </div>
+        <div class="dropdown-container">
+          <div class="dropdown">
+            <label for="country1">From:</label>
+            <select id="country1" [(ngModel)]="country1" (change)="updateChart()">
+              <option value="INR">India</option>
+              <option value="USD">USA</option>
+              <option value="GBP">UK</option>
+              <option value="EUR">France</option>
+              <option value="JPY">Japan</option>
+            </select>
+          </div>
+          <div class="dropdown">
+            <label for="country2">To:</label>
+            <select id="country2" [(ngModel)]="country2" (change)="updateChart()">
+              <option value="INR">India</option>
+              <option value="USD">USA</option>
+              <option value="GBP">UK</option>
+              <option value="EUR">France</option>
+              <option value="JPY">Japan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="dropdown-container">
+    <div class="dropdown">
+      <label for="country1">From:</label>
+      <select id="country1" [(ngModel)]="country1" (change)="updateChartAndRates()">
+        <option *ngFor="let rate of exchangeRates" [value]="rate.code">{{ rate.country }}</option>
+      </select>
+    </div>
+    <div class="dropdown">
+      <label for="country2">To:</label>
+      <select id="country2" [(ngModel)]="country2" (change)="updateChartAndRates()">
+        <option *ngFor="let rate of exchangeRates" [value]="rate.code">{{ rate.country }}</option>
+      </select>
+    </div>
+  </div> -->
+  
+  <table class="exchange-rate-table" style=" margin-left: 300px;">
+    <thead>
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Exchange Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ getCountryName(country1) }}</td>
+        <td>{{ getCountryName(country2) }}</td>
+        <td>{{ getExchangeRateString(country1, country2) }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+
+ <!-- <app-footer></app-footer> -->

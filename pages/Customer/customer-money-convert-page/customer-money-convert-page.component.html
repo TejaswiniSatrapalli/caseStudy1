@@ -1,0 +1,53 @@
+<div class="login_page">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <h3>Convert Money</h3>
+                    <hr />
+
+                    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" [noValidate]="false">
+
+                        <div class="row">
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>From Currency</label>
+                                    <select class="form-control" ngModel name="fromCurrency" required>
+                                        <option value="" disabled>SELECT FROM RATE</option>
+                                        <option *ngFor="let item of rateList" [value]="item?.fromCurrency">
+                                            {{item?.fromCurrency}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>To Currency</label>
+                                    <select class="form-control" ngModel name="toCurrency" required>
+                                        <option value="" disabled>SELECT TO RATE</option>
+                                        <option *ngFor="let item of rateList" [value]="item?.toCurrency">
+                                            {{item?.toCurrency}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Amount</label>
+                                    <input type="number" step="0.01" class="form-control" ngModel name="amount"
+                                        required />
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary mt-3">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

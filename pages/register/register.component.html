@@ -1,0 +1,127 @@
+<div class="register_page mt-4">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <h3>Registration</h3>
+                    <hr>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                                type="button" role="tab" aria-controls="home" aria-selected="true">User</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                                type="button" role="tab" aria-controls="profile" aria-selected="false">Admin</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <!-- USER START -->
+                            <form #registerCustomerForm="ngForm" (ngSubmit)="onSubmit(registerCustomerForm, 'CUSTOMER')"
+                                [noValidate]="false">
+
+                                <div class="row">
+                                    <div class="col-8 mt-3">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" class="form-control" ngModel name="name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Gender</label>
+                                            <select type="text" class="form-control" ngModel name="gender" required>
+                                                <option value="" disabled>SELECT</option>
+                                                <option value="MALE">MALE</option>
+                                                <option value="FEMALE">FEMALE</option>
+                                                <option value="OTHER">OTHER</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Email address</label>
+                                            <input type="email" class="form-control" ngModel name="email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Location</label>
+                                            <input type="text" class="form-control" ngModel name="location" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Mobile Number</label>
+                                            <input type="text" class="form-control" ngModel name="mobileNo"
+                                                pattern="^\d{10}$" minlength="10" maxlength="10" required>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" ngModel name="password" required
+                                                minlength="8">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+                                <button routerLink="/"type="reset" class="btn btn-outline-secondary mt-3 ms-2" >Cancel</button>
+                            </form>
+                            <!-- USER ENDS -->
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <!-- ADMIN START -->
+                            <form #registerAdminForm="ngForm" (ngSubmit)="onSubmit(registerAdminForm, 'ADMIN')"
+                                [noValidate]="false">
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label>Full Name</label>
+                                            <input type="text" class="form-control" ngModel name="adminName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Email address</label>
+                                            <input type="email" class="form-control" ngModel name="adminEmail" required>
+                                        </div>
+                                    </div>
+
+                                    <div class=" col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Username</label>
+                                            <input type="text" class="form-control" ngModel name="adminUsername"
+                                                required>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-4 mt-3">
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" ngModel name="adminPassword"
+                                                required minlength="8">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-primary mt-3">Submit</button>
+                                <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                            </form>
+                            <!-- ADMIN ENDS -->
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

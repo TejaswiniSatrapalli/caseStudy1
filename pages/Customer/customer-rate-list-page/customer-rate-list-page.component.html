@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="card">
+                <h3> Rate List</h3>
+                <hr />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>ID</th>
+                            <th>FROM CURRENCY</th>
+                            <th>TO CURRENCY</th>
+                            <th>RATE</th>
+                            <th>DATE</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of rateList">
+                            <td>{{item?.id}}</td>
+                            <td>{{item?.fromCurrency}}</td>
+                            <td>{{item?.toCurrency }}</td>
+                            <td>{{item?.rate}}</td>
+                            <td>{{item?.date | date}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
