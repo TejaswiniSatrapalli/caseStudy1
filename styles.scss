@@ -1,0 +1,19 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.card {
+    padding: 15px;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.10),
+        0px 1px 20px 0px rgba(0, 0, 0, 0.10) !important;
+        border: none;
+    background-color: #fffcfc;
+}
+
+body{
+    // background: #ee0979;
+    // background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background-color: white;
+    // background: linear-gradient(to right, #deeef4, #afe2f5);
+       
+}
+

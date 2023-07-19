@@ -1,0 +1,188 @@
+<!-- <div class="login_page">
+    <div class="cantainer">
+        <div class="row">
+
+             <div class="col-md-4 offset-md-4">
+                <div class="card">
+                  <h3>Login</h3>
+                  <hr />
+              
+                  <div class="nav nav-tabs" id="myTab" role="tablist">
+                    <div class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                        role="tab" aria-controls="home" aria-selected="true" style="margin-left: 30px;">
+                        User
+                      </button>
+                    </div>
+  
+                    <div class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                        role="tab" aria-controls="profile" aria-selected="false" style="margin-left: 280px;">
+                        Admin
+                      </button>
+                    </div>
+                </div>
+                  <br>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm, 'CUSTOMER')" [noValidate]="false">
+              
+                        <div class="row">
+                          <div class="col-12 mt-3">
+                            <div class="form-group">
+                              <label>User Email</label>
+                              <input type="email" class="form-control" ngModel name="email" required />
+                            </div>
+                          </div>
+                          <div class="col-12 mt-3">
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" ngModel name="password" required />
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary mt-3" style="background-color: rgb(149, 194, 252);">
+                            login
+                        </button>
+                        <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>      
+                
+                </form>
+                </div>
+  
+                   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                           
+                            <form #loginAdminForm="ngForm" (ngSubmit)="onSubmit(loginAdminForm,'ADMIN')"
+                                [noValidate]="false">
+
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label>Admin Username</label>
+                                            <input type="text" class="form-control" ngModel name="adminUsername"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" ngModel name="adminPassword"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-primary mt-3" style="background-color: rgb(149, 194, 252);">
+                                    login
+                                </button>
+                                <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  -->
+
+
+<div class="login_page">
+    <div class="cantainer">
+      <div class="row">
+
+       
+        <div class="col-md-4 offset-md-4">
+          <div class="card">
+            <!-- <h3>Login</h3> -->
+            <div class="imgcontainer">
+                <img src="assets/img_avatar3.png" alt="Avatar" class="avatar">
+              </div>
+              <br>
+               <!-- <div class="divider"> -->
+  
+            <div class="nav nav-tabs" id="myTab" role="tablist">
+              <div class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                  role="tab" aria-controls="home" aria-selected="true" >
+                  User Login
+                </button>
+              </div>
+  
+              <div class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                  role="tab" aria-controls="profile" aria-selected="false">
+                  Admin Login
+                </button>
+              </div>
+            </div>
+            <br>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm, 'CUSTOMER')" [noValidate]="false">
+  
+                  <div class="row">
+                    <div class="col-12 mt-3">
+
+                      <div class="form-group">
+                        <label>User Email*</label>
+                        <input type="email" class="form-control" ngModel name="email" required  placeholder="Enter User Email" />
+                   </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password*</label>
+                        <input type="password" class="form-control" ngModel name="password" required placeholder="Enter password" />
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-outline-primary mt-3" style="background-color:green;color: white;">
+                    login
+                  </button>
+                  <br>
+                 
+                  <div   class="container centered-text" style="font-size: 16px;">Don't have an account? <a routerLink="/register">Sign up</a></div>
+                  <!-- <br> -->
+                  
+                  <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2" style="background-color: rgb(249, 102, 102);color:white;width:30%;">Cancel</button>
+                  <br>
+                </form>
+              </div>
+  
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                
+                <form #loginAdminForm="ngForm" (ngSubmit)="onSubmit(loginAdminForm,'ADMIN')"
+                  [noValidate]="false">
+  
+                  <div class="row">
+                    <div class="col-12 mt-3">
+                      <div class="form-group">
+                        <label>Admin Username*</label>
+                        <input type="text" class="form-control" ngModel name="adminUsername" required placeholder="Enter AdminName"/>
+                      </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password*</label>
+                        <input type="password" class="form-control" ngModel name="adminPassword" required placeholder="Enter password "/>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <button type="submit" class="btn btn-outline-primary mt-3" style="background-color:green;color: white;">
+                    login
+                  </button>
+                  <div   class="container centered-text" style="font-size: 16px;">Don't have an account? <a routerLink="/register">Sign up</a></div>
+
+                  <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2" style="background-color: rgb(249, 102, 102);color:white;width:30%;">Cancel</button>
+                  <br>
+  
+                  <!-- <button routerLink="/" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button> -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

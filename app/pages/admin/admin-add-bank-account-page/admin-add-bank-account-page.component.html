@@ -1,0 +1,68 @@
+<div class="login_page">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <h3>Add Bank Account</h3>
+                    <hr />
+
+                    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" [noValidate]="false">
+
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <div class="form-group">
+                                    <label>Select User</label>
+                                    <select (change)="onUserSelect(registerForm.form.value.userId)" class="form-control"
+                                        ngModel name="userId" required>
+                                        <option value="" disabled>SELECT USER</option>
+                                        <option *ngFor="let item of userList" [value]="item?.usersId">{{item?.name |
+                                            uppercase}}
+                                            - {{item?.email}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Account Holder Name</label>
+                                    <input type="text" class="form-control" [value]="selectedUser.name | uppercase"
+                                        ngModel name="accountHolderName" required readonly />
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Bank Name</label>
+                                    <input type="text" step="0.01" class="form-control" ngModel name="bankName"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Account Number</label>
+                                    <input type="number" class="form-control" ngModel name="accountNumber" required />
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>Contact number</label>
+                                    <input type="number" class="form-control" ngModel name="contactnumber" required />
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="form-group">
+                                    <label>IFSC Code</label>
+                                    <input type="text" class="form-control" ngModel name="ifscCode" required />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary mt-3">
+                            Submit
+                        </button>
+                        <button type="reset" class="btn btn-outline-secondary mt-3 ms-2">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="register_page mt-4">
+    <div class="cantainer">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <h3>My Profile</h3>
+                    <hr>
+                    <form #registerAdminForm="ngForm" (ngSubmit)="onSubmit(registerAdminForm)" [noValidate]="false">
+                        <div class="row">
+
+                            <div class="col-8 mt-3">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="userDetails.name" disabled
+                                        name="name">
+                                </div>
+                            </div>
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select type="text" class="form-control" [(ngModel)]="userDetails.gender" disabled
+                                        name="gender">
+                                        <option value="" disabled>SELECT</option>
+                                        <option value="MALE">MALE</option>
+                                        <option value="FEMALE">FEMALE</option>
+                                        <option value="OTHER">OTHER</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Email address</label>
+                                    <input type="email" class="form-control" [(ngModel)]="userDetails.email" disabled
+                                        name="email">
+                                </div>
+                            </div>
+
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Location</label>
+                                    <input type="text" class="form-control" [(ngModel)]="userDetails.location" disabled
+                                        name="location">
+                                </div>
+                            </div>
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" class="form-control" [(ngModel)]="userDetails.mobileNo" disabled
+                                        name="mobileNo">
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>Old Password</label>
+                                    <input type="password" class="form-control" ngModel name="oldPassword" required
+                                        minlength="8">
+                                </div>
+                            </div>
+                            <div class="col-4 mt-3">
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" class="form-control" ngModel name="newPassword" required
+                                        minlength="8">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary mt-3">Reset Password</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

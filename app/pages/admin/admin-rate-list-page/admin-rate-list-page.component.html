@@ -1,0 +1,92 @@
+<div class="cantainer">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="card">
+                <h3> Rate List</h3>
+                <hr />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>ID</th>
+                            <th>FROM CURRENCY</th>
+                            <th>TO CURRENCY</th>
+                            <th>RATE</th>
+                            <th>DATE</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of rateList">
+                            <td>{{item?.id}}</td>
+                            <td>{{item?.fromCurrency}}</td>
+                            <td>{{item?.toCurrency }}</td>
+                            <td>{{item?.rate}}</td>
+                            <td>{{item?.date | date}}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" (click)="onSelect(item)"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    View / Update
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)" [noValidate]="false">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">View / Update Details</h5>
+                    <button type="button" class="btn-close" id="modal-close-btn" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6 mt-3">
+                            <input type="hidden" name="id" [(ngModel)]="selectedRate.id">
+                            <div class="form-group">
+                                <label>From Currency</label>
+                                <input type="text" class="form-control" [(ngModel)]="selectedRate.fromCurrency"
+                                    name="fromCurrency" required />
+                            </div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <div class="form-group">
+                                <label>To Currency</label>
+                                <input type="text" class="form-control" [(ngModel)]="selectedRate.toCurrency"
+                                    name="toCurrency" required />
+                            </div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <div class="form-group">
+                                <label>Rate</label>
+                                <input type="number" step="0.01" class="form-control" [(ngModel)]="selectedRate.rate"
+                                    name="rate" required />
+                            </div>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="date" step="0.01" class="form-control" [(ngModel)]="selectedRate.date"
+                                    name="date" required />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

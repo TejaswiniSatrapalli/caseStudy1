@@ -1,0 +1,45 @@
+.login_page {
+    padding-top: 45px;
+}
+
+
+.imgcontainer {
+    text-align: center;
+    margin: 22px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 20%;
+    border-radius: 30%;
+  }
+  
+ button {
+//     background-color: #28a745;
+//     color: white;
+    padding: 13px 20px;
+    margin: 8px 0;
+     border: none;
+    cursor: pointer;
+    width: 100%;
+   
+  }
+  
+  button:hover {
+    // width: 100%;
+    opacity: 0.8;
+  }
+  
+  
+
+/* Add this CSS to remove the line separating the buttons from the user email and password container */
+// .divider {
+//     border-top: none;
+//     border-bottom: none;
+//   }
+  
+/* Add this CSS to remove the bottom border from the active button */
+// .nav-link.active {
+//     border-bottom: none;
+//   }
+  
+
